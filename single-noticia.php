@@ -11,8 +11,9 @@
             <div class="vista-noticia__cuerpo">
                 <main class="vista-noticia__bloque">
                     <div>
+						<?php $title = get_the_title();?>
                         <figure class="vista-noticia__imagen zoom">
-                            <?php the_post_thumbnail('large', array( 'title' => 'imagen destacada' )); ?>
+                            <?php the_post_thumbnail('large', array( 'title' => 'imagen destacada', 'alt' => $title )); ?>
                         </figure>
                         <div class="vista-noticia__contenido">
                             <p class="fecha-noticia">
@@ -38,9 +39,9 @@
                                     <script async src="https://static.addtoany.com/menu/page.js"></script>
                                 </div>
                             </div>
-                            <div class="vista-noticia__contenido-autor">
-                                <?php echo get_the_tag_list();  ?>
-                            </div>
+                             <div class="vista-noticia__contenido-autor">
+                                  <?php echo get_the_tag_list();  ?>
+                             </div>
                             <div class="contenido-noticia">
                                 <?php the_content(); ?>
                             </div>
@@ -92,7 +93,7 @@
                         <?php } ?>
                             <div class="contenedor-noticia__secundaria-vertodo">
                                 <p class="vertodo">
-                                    <a title="categoria noticias" href="<?php echo get_tag_link(6); ?>"> Ver Últimas Noticias <i class="fa fa-angle-right"></i> </a>
+									<a title="categoria noticias" href="<?php echo get_tag_link(6); ?>"> <span>Ver Últimas Noticias</span> <i class="fa fa-angle-right"></i> </a>
                                 </p>
                             </div>
                         </div>
@@ -103,4 +104,3 @@
 </main>
 
 <?php get_footer(); ?>
-

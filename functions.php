@@ -45,7 +45,7 @@ function ph_assets(){
         wp_enqueue_style('menu',get_template_directory_uri().'/assets/css/menu.css','', '1', '(min-width:1190px)');
     }
     //CARGO mis estilos con las dependencias antes registradas
-    wp_enqueue_style('estilos',get_template_directory_uri().'/assets/css/estilos.css', array('bootstrap','glidercss', 'dataTableTrapcss','lightbox','FontAwesomeIcon'), '5.8.2','all');
+    wp_enqueue_style('estilos',get_template_directory_uri().'/assets/css/estilos.css', array('bootstrap','glidercss', 'dataTableTrapcss','lightbox','FontAwesomeIcon'), '5.8.5','all');
 
     //scripts
     //no estoy usando todos los archivos de boostrap, solo lo ensencial

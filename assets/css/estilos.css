@@ -77,8 +77,6 @@
     font-display: swap;
 }
 
-
-
 :root {
     --letra-roboto: 'Roboto', sans-serif;
     --letra-roboto-mono: 'Roboto Mono', monospace;
@@ -113,6 +111,9 @@
         /* color-hover-elementos-menu   -todas las paginas */
     --color-elementos-menu-hover: #01A2D9;
 
+	 /*****COLOR CARD SERVICIOS:hover****/
+        /* card servicio    - pagina INICIO - seccion servicios */
+    --color-card-servicio: #fff;
     /*****COLOR FONDO NOTICIA****/
         /* fondo noticia    - pagina INICIO - seccion noticias
                             - Pagina todas las noticias
@@ -1024,7 +1025,7 @@ figure{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333;
+    color: #555;
     font-size: 1.5rem;
     font-weight:900;
     text-align: center;
@@ -1036,14 +1037,14 @@ figure{
     text-decoration: none;
 }
 .contenedor-servicio__card a:hover .contenedor-servicio__card-inferior{
-    background-color: #dc3434;
+    background-color: var(--color-card-servicio);
 }
 .contenedor-servicio__card a:hover  ~ .contenedor-servicio__card-superior{
     /* background-color: #dc3434; */
-    background-color: #dc3434;
+    background-color: var(--color-card-servicio);
 }
 .contenedor-servicio__card a:hover .contenedor-servicio__card-inferior h4{
-    color:#fff;
+    color:#000;
 }
 /* ACTIVIDADES - SERVICIO  */
 .contenedor-servicio__card-actividad{
@@ -1246,18 +1247,20 @@ figure{
 .contenedor-noticia__secundaria-vertodo .vertodo a{
     color: #fff;
     border-bottom: none;
+	display: flex;
+	align-items: center
 }
-.contenedor-noticia__secundaria-vertodo .vertodo a:hover{
+.contenedor-noticia__secundaria-vertodo .vertodo a span:hover{
     color: #fff;
-    border-bottom: 2px solid red;
+	text-decoration: 2px underline red;
+}
+.contenedor-noticia__secundaria-vertodo .vertodo a i{
+  margin-left: .5rem;
 }
 .vertodo a .fa-angle-right{
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 900;
     color:red;
-}
-.vertodo a:hover{
-    color: red;
 }
 .vista-noticia__masNoticia .contenedor-noticia__secundaria-vertodo{
     align-self: center;
@@ -1941,7 +1944,6 @@ figure{
 }
 .titulo-plantilla .titulo-principal{
     margin-top:3rem;
-    margin-bottom: 5rem;
     font-size: 4.5rem;
     font-family: var(--letra-roboto);
     font-weight: bold;

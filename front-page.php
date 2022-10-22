@@ -191,7 +191,7 @@
                     <aside class="contenedor-noticia__secundaria  ">
                         <div class="contenedor-noticia__secundaria-vertodo">
                             <p class="vertodo">
-                                <a title="categoria noticias" href="<?php echo get_tag_link(6); ?>" > Ver Últimas Noticias <i class="fa fa-angle-right"></i></a>
+								<a title="categoria noticias" href="<?php echo get_tag_link(6); ?>" ><span> Ver Últimas Noticias </span> <i class="fa fa-angle-right"></i></a>
                             </p>
                         </div>
                         <div class="contenedor-noticia__secundaria-elementos">
