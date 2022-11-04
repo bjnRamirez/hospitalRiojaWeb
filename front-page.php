@@ -175,13 +175,15 @@
                             <div class="adelanto">
                                 <?php the_excerpt(); ?>
                             </div>
-                            <a  href="<?php the_permalink(); ?>" class="boton__leermas">
-                                <button class="leermas">
-                                    <span class="shadow"></span>
-                                    <span class="borde"></span>
-                                    <span class="texto" >Seguir leyendo</span>
-                                </button>
-                            </a>
+                            <p class="boton__leermas">
+								<a  href="<?php the_permalink(); ?>">
+                                	<button class="leermas">
+                                    	<span class="shadow"></span>
+                                    	<span class="borde"></span>
+                                    	<span class="texto" >Seguir leyendo</span>
+                                	</button>
+								</a>
+                            </p>
                         </div>
                         <?php
                         }
