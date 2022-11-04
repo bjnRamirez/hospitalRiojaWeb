@@ -14,12 +14,6 @@
                     </li>
                     <li>
                         <div class="section-progress-indicator">
-                            <a href="#objetivos" class="section-progress-indicator__element">Objetivos</a>
-                            <span class="section-progress-indicator__progress"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="section-progress-indicator">
                             <a href="#prestaciones" class="section-progress-indicator__element">Prestaciones</a>
                             <span class="section-progress-indicator__progress"></span>
                         </div>

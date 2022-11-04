@@ -8,7 +8,7 @@ get_header(); ?>
         <div class="titulo-plantilla">
             <h1 class="titulo-principal"><?php the_title(); ?></h1>
         </div>
-        <br>
+
         <div class="contenedor-documento">
             <?php
             $args = array(
