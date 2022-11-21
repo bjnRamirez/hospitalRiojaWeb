@@ -174,7 +174,9 @@ footer{
 td{
     border: 0.1rem gray solid;
 }
-
+#wpadminbar {
+    position: absolute !important;
+}
 /******************TEXTO****************/
 .has-text-align-right{
 	text-align: right !important;
@@ -3837,6 +3839,9 @@ input#button:checked ~ .paper:before {
     .sub-menu li:hover > .sub-menu{
         top: 0;
         left: 100%;
+    }
+	.vista-servicio__secciones{
+        top: 47px;
     }
 }
 

@@ -60,7 +60,7 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v14.0" nonce="eHYcZa2X"></script>
 
-    <header class="mantener-posicion-menu">
+
         <div class="menu-top" ><!--flex -->
             <figure class="logo">
                 <?php
@@ -76,7 +76,7 @@
                 </a>
             </figure>
         </div>
-
+    <header class="mantener-posicion-menu">
         <div class="contenedor-menu">  <!--flex -->
                 <!-- <span class="nav-bar" id="btnMenu"><i class="fa-solid fa-bars"></i></span> -->
             <div class="hamburger" id="btnMenu">

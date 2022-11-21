@@ -41,11 +41,11 @@ function ph_assets(){
     wp_register_style( 'FontAwesomeIcon', get_template_directory_uri().'/assets/fonts/style.css','','1.5','all' );
 
     //cargar el archivo menu.css menos en los servicios
-    if(!is_singular( 'servicio' )){
+//     if(!is_singular( 'servicio' )){
         wp_enqueue_style('menu',get_template_directory_uri().'/assets/css/menu.css','', '1', '(min-width:1190px)');
-    }
+//     }
     //CARGO mis estilos con las dependencias antes registradas
-    wp_enqueue_style('estilos',get_template_directory_uri().'/assets/css/estilos.css', array('bootstrap','glidercss', 'dataTableTrapcss','lightbox','FontAwesomeIcon'), '5.8.6','all');
+    wp_enqueue_style('estilos',get_template_directory_uri().'/assets/css/estilos.css', array('bootstrap','glidercss', 'dataTableTrapcss','lightbox','FontAwesomeIcon'), '5.8.8','all');
 
     //scripts
     //no estoy usando todos los archivos de boostrap, solo lo ensencial
