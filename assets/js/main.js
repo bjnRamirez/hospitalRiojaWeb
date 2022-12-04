@@ -6,17 +6,37 @@ btnMenu.addEventListener("click", function(){
 });
 
 
-//COMIENZO DEL SCRIPT PARA EL MENU
-const primeraGeneracion = document.querySelectorAll(".menu > .menu-item-has-children > a");
+//comentar este bloque de codigo si va usar el otro script para el sub sub nivel
+//comienzo del script para el SUB MENU
+const subMenuBtnPadre = document.querySelectorAll(".menu > .menu-item-has-children > a");
+for(let i=0; i < subMenuBtnPadre.length; i++){
+    subMenuBtnPadre[i].addEventListener("click", desplegarSubMenuPadre);
+}
 
+function desplegarSubMenuPadre(){
+    if(window.innerWidth < 1191){
+        const subMenu = this.nextElementSibling;
+        const heightSubMenu = subMenu.scrollHeight;
+        if(subMenu.getAttribute("style")){
+            //console.log("%c quitamos el style al primersub ","background: #222; color: #FF0000");
+            subMenu.removeAttribute("style");
+        }else{
+            //console.log("%c aumentamos el tamaño al elemento sub-menu primerSub: " + heightSubMenu ,"background: #222; color: 	#008000")
+            subMenu.style.height = heightSubMenu + "px";
+        }
+    }
+}
+//fin del script para el SUB MENU
+
+
+
+//comienzo del script para el SUB SUB MENU
+/* const primeraGeneracion = document.querySelectorAll(".menu > .menu-item-has-children > a");
 for(let i=0; i < primeraGeneracion.length; i++){
-
     primeraGeneracion[i].addEventListener("click", function(){
         if(window.innerWidth < 1191){
-
             const primerSub = this.nextElementSibling;
             const heightPrimerSub = primerSub.scrollHeight;
-
             if(primerSub.classList.contains("desplegar")){
                 primerSub.classList.remove("desplegar");
                 // console.log("%c quitamos el style al primersub ","background: #222; color: #FF0000");
@@ -29,9 +49,7 @@ for(let i=0; i < primeraGeneracion.length; i++){
         }
     });
 }
-//FIN DEL SCRIPT PARA EL MENU
 
-//COMIENZO DEL SCRIPT PARA EL sub menu
 for(let i=0; i < primeraGeneracion.length; i++){
     const segundaGeneracion = primeraGeneracion[i].nextElementSibling.querySelectorAll(".menu > .menu-item-has-children > .sub-menu > .menu-item-has-children > a");
 
@@ -72,12 +90,12 @@ for(let i=0; i < primeraGeneracion.length; i++){
             }
             });
         };
-}
-//FIN DEL SCRIPT PARA EL sub menu
+} */
+//Fin del script para el SUB SUB MENU
 
 
-//COMIENZO DEL SCRIPT PARA EL sub sub menu 
-/* !! DESCOMENTAR ESTE BLOQUE DE CODIGO PARA QUE FUNCIONA EL SUB SUB NIVEL DEL MENU
+//COMIENZO DEL SCRIPT PARA EL sub sub sub menu
+/* !! DESCOMENTAR ESTE BLOQUE DE CODIGO PARA QUE FUNCIONA EL SUB SUB SUB NIVEL DEL MENU
 for(let i=0; i < primeraGeneracion.length; i++){
     const segundaGeneracion = primeraGeneracion[i].nextElementSibling.querySelectorAll(".menu > .menu-item-has-children > .sub-menu > .menu-item-has-children > a");
     for(let j=0; j < segundaGeneracion.length; j++){
@@ -139,7 +157,7 @@ for(let i=0; i < primeraGeneracion.length; i++){
     }
 }
 */
-//FIN DEL SCRIPT PARA EL sub sub menu
+//FIN DEL SCRIPT PARA EL sub sub sub menu
 
 const selectElement = (element) => document.querySelector(element);
 selectElement('.hamburger').addEventListener('click', ()=>{

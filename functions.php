@@ -74,7 +74,7 @@ function ph_assets(){
     wp_enqueue_script('tabla', get_template_directory_uri().'/assets/js/tabla.js',array('jquery','dataTable.min','dataTableTrapjs'),'7',true);
 
     //main
-    wp_enqueue_script('main', get_template_directory_uri().'/assets/js/main.js','','5.6.7',true);
+    wp_enqueue_script('main', get_template_directory_uri().'/assets/js/main.js','','5.6.8',true);
 }
 // el plugin ultimate member, creaba codigo sin utilidad afectando el SEO, esto es para quitarlo
 add_filter('plupload_default_settings', function ($settings) {
